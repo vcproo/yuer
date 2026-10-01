@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="brand">✿ 小芽 <text class="brand-note">慢 慢 长 大</text></view>
+  <view class="eyebrow">YOUR LITTLE EVERYDAY</view>
+  <view class="title">陪你，把日子慢慢长大。</view>
+  <view class="subtitle">一点点陪伴，一点点成长。</view>
+  <view class="stage {{sleeping ? 'night' : ''}}">
+    <view class="pill">{{sleeping ? '进入甜甜的梦乡' : '今日份的小美好'}}</view>
+    <canvas type="2d" id="baby" class="canvas" bindtouchstart="touch" bindtouchmove="touch" bindtouchend="pet"></canvas>
+    <view wx:if="error" class="error">{{error}}</view>
+  </view>
+  <view class="hint">轻轻摸摸宝宝，看看 TA 的回应</view>
+  <view class="name-row"><text class="name">小芽</text><text class="day">陪伴第 {{day}} 天</text></view>
+  <view class="message">{{message}}</view>
+  <view class="stat"><text>饱腹</text><view class="track"><view class="fill" style="width:{{food}}%"></view></view><text class="value">{{food}}</text></view>
+  <view class="stat"><text>心情</text><view class="track"><view class="fill peach" style="width:{{mood}}%"></view></view><text class="value">{{mood}}</text></view>
+  <view class="stat"><text>精力</text><view class="track"><view class="fill gold" style="width:{{energy}}%"></view></view><text class="value">{{energy}}</text></view>
+  <view class="actions">
+    <button data-act="pet" bindtap="action" disabled="{{sleeping || busy}}"><text class="icon">♡</text>摸摸头</button>
+    <button data-act="feed" bindtap="action" disabled="{{sleeping || busy}}"><text class="icon">♧</text>喂奶</button>
+    <button data-act="sleep" bindtap="action" disabled="{{busy}}"><text class="icon">☾</text>{{sleeping ? '轻轻唤醒' : '哄睡'}}</button>
+  </view>
+  <view class="note">不必着急，成长有自己的节奏。</view>
+  <view class="footer">{{saveError ? '暂时无法保存进度，请检查设备存储空间' : '2D 互动体验 · 成长保存在这台设备'}}</view>
+</view>

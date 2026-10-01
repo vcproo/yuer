@@ -1,0 +1,5 @@
+{
+  "pages": ["pages/life/index", "pages/home/index"],
+  "window": { "navigationBarTitleText": "小芽 · 慢慢长大", "navigationBarBackgroundColor": "#f8f5ef", "navigationBarTextStyle": "black", "backgroundColor": "#f8f5ef" },
+  "style": "v2"
+}

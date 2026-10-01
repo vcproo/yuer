@@ -1,0 +1,8 @@
+{
+  "description": "小芽 · 2D 云养娃互动原型",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "little-sprout",
+  "setting": { "es6": true, "minified": true }
+}
